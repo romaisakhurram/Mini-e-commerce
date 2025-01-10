@@ -10,7 +10,7 @@ export default async function Product () {
     <>
       <div className="gap-5 grid lg:grid-cols-3 p-12">
         {
-          res.map((val:any,i:any)=>{
+          res.map((val:any,index:any)=>{
            return(
             <>
             <div className="w-full max-w-sm bg-white border border-orange-600 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mb-10">
@@ -18,7 +18,7 @@ export default async function Product () {
               <div>
               <Image
                 className="p-8 rounded-lg w-[350px] h-[350px]"
-                src={val.image}
+                src={index.image}
                 alt="product image"
                 width={200}
                 height={200}
