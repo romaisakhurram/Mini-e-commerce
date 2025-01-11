@@ -160,8 +160,16 @@ export default async function Product ({params}:{params:{Product:string}}) {
                         <span className="title-font font-medium text-2xl text-gray-900">
                           ${res.price}
                         </span>
-                        <button className="flex ml-auto text-white bg-orange-600 border-0 py-2 px-6 focus:outline-none hover:bg-orange-800 rounded">
-                          Button
+                        <button className="snipcart-add-item flex ml-auto text-white bg-orange-600 border-0 py-2 px-6 focus:outline-none hover:bg-orange-800 rounded"
+                          data-item-id={res.id}
+                          data-item-price={res.price}
+                          data-item-url={res.url}
+                          data-item-description={res.decription}
+                          data-item-image={res.images}
+                          data-item-name={res.title}
+                          data-item-custom1-name="Frame color"
+                          data-item-custom1-options="Black|Blue|White">
+                         Add To Cart 
                         </button>
                         <button className="rounded-full w-10 h-10 bg-orange-200 p-0 border-0 inline-flex items-center justify-center text-orange-500 ml-4">
                         <svg
